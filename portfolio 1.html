@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AP's Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary: #3b82f6;
+      --primary-dark: #2563eb;
+      --secondary: #6b7280;
+      --dark: #1f2937;
+      --light: #f9fafb;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+    .skill-bar { transition: width 1s ease-in-out; }
+    #projects .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+
+<!-- Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex items-center">
+        <span class="text-xl font-bold text-blue-500">AP Portfolio</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#home" class="text-blue-500 font-medium">Home</a>
+        <a href="#about" class="text-gray-600 hover:text-blue-500 transition">About</a>
+        <a href="#projects" class="text-gray-600 hover:text-blue-500 transition">Projects</a>
+        <a href="#skills" class="text-gray-600 hover:text-blue-500 transition">Skills</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-500 transition">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="py-20 md:py-28 bg-gradient-to-r from-blue-50 to-indigo-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between">
+      <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Hi, I'm <span class="text-blue-500">AP</span></h1>
+        <h2 class="text-2xl md:text-3xl text-gray-700 mb-6">Aspiring <span class="text-blue-500">Software Engineer | Web Developer | Competitive Coder</span></h2>
+        <p class="text-gray-600 mb-8 max-w-lg">I am a student passionate about building real-world solutions through code. I enjoy solving problems and creating smooth user experiences through web development.</p>
+        <div class="flex space-x-4 fade-in delay-1">
+          <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition shadow-md">Get In Touch</a>
+          <a href="#projects" class="text-blue-500 hover:text-blue-600 border border-blue-500 px-6 py-3 rounded-lg transition">View My Work</a>
+        </div>
+      </div>
+      <div class="md:w-1/3 fade-in delay-2">
+        <div class="rounded-full overflow-hidden border-4 border-white shadow-xl">
+          <img src="https://placehold.co/400" alt="AP's profile picture" class="w-full h-auto">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4 fade-in">My Projects</h2>
+      <div class="w-20 h-1 bg-blue-500 mx-auto mb-6 fade-in delay-1"></div>
+      <p class="text-gray-600 max-w-3xl mx-auto fade-in delay-2">Some of the projects I have worked on include the following:</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Weather App -->
+      <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 fade-in delay-1">
+        <div class="project-image h-48 overflow-hidden">
+          <img src="https://placehold.co/600x400" alt="Weather App UI" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">Weather App</h3>
+          <p class="text-gray-600 mb-4">A responsive weather application that fetches real-time weather updates using OpenWeather API. Built with HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+
+      <!-- AI Chatbox -->
+      <div class="project-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 fade-in delay-2">
+        <div class="project-image h-48 overflow-hidden">
+          <img src="https://placehold.co/600x400" alt="AI Chatbox UI" class="w-full h-full object-cover">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">AI Chatbox</h3>
+          <p class="text-gray-600 mb-4">An AI-powered chatbot using JavaScript and NLP libraries. It can answer basic queries, simulate conversation and provide assistance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Info Update -->
+<section id="contact" class="py-20 bg-blue-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4 fade-in">Get In Touch</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto fade-in delay-2">Let's connect and collaborate. Reach out anytime!</p>
+    </div>
+    <div class="text-center text-gray-700">
+      <p><strong>Location:</strong> Kolkata, West Bengal</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
